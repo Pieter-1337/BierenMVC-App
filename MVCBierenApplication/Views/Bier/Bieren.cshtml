@@ -1,0 +1,12 @@
+﻿@model List<MVCBierenApplication.Models.Bier>
+
+<h2>Bieren</h2>
+
+<ul>
+    @foreach(var bier in Model)
+    {
+        <li style="text-decoration:none; list-style-type:none"> @String.Format("{0:000}", bier.ID) @bier.Naam 
+        @Html.DisplayFor(m => bier.Alcohol)
+        </li>
+    }
+</ul>
