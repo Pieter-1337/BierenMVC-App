@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MVCBierenApplication.Models;
+using System.Data;
 
 namespace MVCBierenApplication.Services
 {
@@ -23,6 +24,18 @@ namespace MVCBierenApplication.Services
         public List<Bier> FindAll()
         {
             return bieren.Values.ToList();
+        }
+
+        public Bier GetBier(int id)
+        {
+            Bier bier = bieren.Values.Where(e => e.ID == id).SingleOrDefault();
+            return bier;
+        }
+
+        public void DeleteBier(int id)
+        {
+            Bier bier = bieren.Values.Where(e => e.ID == id).SingleOrDefault();
+            bieren.Remove(bier.ID);
         }
     }
 }

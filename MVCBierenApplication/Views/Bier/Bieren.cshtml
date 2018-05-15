@@ -6,7 +6,9 @@
     @foreach(var bier in Model)
     {
         <li style="text-decoration:none; list-style-type:none"> @String.Format("{0:000}", bier.ID) @bier.Naam 
-        @Html.DisplayFor(m => bier.Alcohol)
+        @Html.DisplayFor(m => bier.Alcohol) 
         </li>
+        <a href="@Url.Action("Verwijder", new { id  = bier.ID})">Verwijder</a>
+
     }
 </ul>

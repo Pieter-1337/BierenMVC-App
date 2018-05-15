@@ -1,0 +1,24 @@
+﻿@model MVCBierenApplication.Models.Bier
+
+@{
+    ViewBag.Title = "Verwijder";
+}
+
+<h2>Verwijder @Model.Naam</h2>
+
+<p>@Html.LabelFor(m => m.Naam): @Model.Naam </p>
+<p>@Html.LabelFor(m => m.Alcohol) : @Model.Alcohol</p>
+
+@using (Html.BeginForm())
+{
+
+    <div class="pad-top">
+        <button type="submit" class="btn btn-danger btn-lg margin-right">
+            <span class="glyphicon glyphicon-trash"></span> Delete
+        </button>
+        <a href="@Url.Action("Index")" class="btn btn-warning btn-lg">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+        </a>
+    </div>
+}
+

@@ -193,6 +193,7 @@
     <Content Include="Views\Bier\Index.cshtml" />
     <Content Include="Views\Bier\Bieren.cshtml" />
     <Content Include="Views\Bier\DisplayTemplates\KleurBierPercent.cshtml" />
+    <Content Include="Views\Bier\Verwijder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
