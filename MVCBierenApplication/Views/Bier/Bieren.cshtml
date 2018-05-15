@@ -2,13 +2,25 @@
 
 <h2>Bieren</h2>
 
-<ul>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Naam</th>
+        <th>Alcohol %</th>
+        <th>Verwijder</th>
+    </tr>
+
     @foreach(var bier in Model)
     {
-        <li style="text-decoration:none; list-style-type:none"> @String.Format("{0:000}", bier.ID) @bier.Naam 
-        @Html.DisplayFor(m => bier.Alcohol) 
-        </li>
-        <a href="@Url.Action("Verwijder", new { id  = bier.ID})">Verwijder</a>
-
+        <tr>
+            <td>@String.Format( "{0:000}",bier.ID)</td>
+            <td>@bier.Naam</td>
+            <td>@bier.Alcohol</td>
+            <td><a href="@Url.Action("Verwijder", new { id  = bier.ID})"><p class="btn btn-danger">Verwijder</p></a></td>
+        </tr>
     }
-</ul>
+</table>
+
+
+
+<a href="@Url.Action("Add")"><p class="btn btn-info">Voeg Bier toe</p></a>

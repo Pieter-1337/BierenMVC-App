@@ -37,5 +37,11 @@ namespace MVCBierenApplication.Services
             Bier bier = bieren.Values.Where(e => e.ID == id).SingleOrDefault();
             bieren.Remove(bier.ID);
         }
+
+        public void AddBier(Bier bier)
+        {
+            bier.ID = bieren.Keys.Max() + 1;
+            bieren.Add(bier.ID, bier);
+        }
     }
 }
