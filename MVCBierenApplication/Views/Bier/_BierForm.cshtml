@@ -21,6 +21,18 @@
                 @Html.TextBoxFor(m => m.Alcohol, new { @class = "form-control" })
                 @Html.ValidationMessageFor(m => m.Alcohol, "", new { @class = "alert-danger" })
             </div>
+           
+            <div class="form-group">
+                @Html.LabelFor(m => m.Brouwer)
+                @Html.TextBoxFor(m => m.Brouwer, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Brouwer, "", new { @class = "alert-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Soort)
+                @Html.TextBoxFor(m => m.Soort, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Soort, "", new { @class = "alert-danger" })
+            </div>
         </div>
 
         <div class="clearfix"></div>

@@ -12,6 +12,7 @@ namespace MVCBierenApplication.Controllers
     public class BierController : Controller
     {
         private BierService bierService = new BierService();
+        private BrouwerService brouwerService = new BrouwerService();
 
         // GET: Bier
         public ActionResult Index()
@@ -43,7 +44,20 @@ namespace MVCBierenApplication.Controllers
 
         public ActionResult Add()
         {
-            Bier bier = new Bier() { };
+            //var brouwers = brouwerService.FindAll();
+            //Dictionary<int, string> BrouwerDic = new Dictionary<int, string>();
+            
+            //foreach (var brouwer in brouwers)
+            //{
+            //    BrouwerDic.Add(brouwer.BrouwerNr, brouwer.BrNaam);
+            //}
+
+            //ViewData["Brouwers"] = new SelectList(BrouwerDic);
+
+            Bier bier = new Bier()
+            {
+                
+            };
             return View(bier);
         }
 
